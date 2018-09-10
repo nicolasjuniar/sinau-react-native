@@ -1,7 +1,8 @@
-import styles from "../../styles";
-import {Button, TextInput, View} from "react-native";
+import Styles from "../../styles";
+import {Button, View} from "react-native";
 import PropTypes from 'prop-types'
 import React, {Component} from "react";
+import DefaultInput from '../../customcomponent/defaultinput/DefaultInput'
 
 export default class PlaceInput extends Component {
 
@@ -21,19 +22,19 @@ export default class PlaceInput extends Component {
 
     render() {
         return (
-            <View style={styles.inputContainer}>
-                <TextInput
-                    style={styles.placeInput}
+            <View style={Styles.inputContainer}>
+                <DefaultInput
                     placeholder={"An Awesome Place"}
                     value={this.state.placeName}
                     underlineColorAndroid={'#ff0'}
                     onChangeText={this.placeChangeNameHandler}
                 />
                 <Button
-                    style={styles.placeButton}
+                    style={Styles.placeButton}
                     title={"Add"}
-                    onPress={()=>this.props.placeSubmitHandler(this.state.placeName)}/>
+                    onPress={() => this.props.placeSubmitHandler(this.state.placeName)}/>
             </View>
         )
     }
 }
+

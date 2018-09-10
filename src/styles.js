@@ -13,11 +13,8 @@ const styles = StyleSheet.create({
     inputContainer: {
         width: '100%',
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center'
-    },
-    placeInput: {
-        width: '70%'
     },
     placeButton: {
         width: '30%'
@@ -61,11 +58,38 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         flex: 1
     },
-    authContainer:{
-        borderColor:'red',
+    authContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    authInputContainer: {
+        width: '80%'
+    },
+    textInput: {
+        width: '70%',
+        borderWidth: 1,
+        borderColor: '#bbb',
+        padding: 5,
+        margin: 8,
+        backgroundColor: '#eee'
+    },
+    loginHeaderText: {
+        fontSize: 28,
+        fontWeight: 'bold',
+        color: 'black'
+    },
+    loginBackgroundImage: {
+        flex: 1,
+        width: '100%'
+    },
+    loginButton: {
+        padding: 10,
+        margin: 5,
+        borderRadius: 5,
+        borderColor: 'black',
         borderWidth: 1
     }
-
 });
 
 export default styles
