@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     inputContainer: {
-        width: '100%',
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center'
@@ -56,7 +55,8 @@ const styles = StyleSheet.create({
     },
     sideDrawerContainer: {
         backgroundColor: 'white',
-        flex: 1
+        flex: 1,
+        paddingTop: 30
     },
     authContainer: {
         flex: 1,

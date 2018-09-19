@@ -4,7 +4,7 @@ import {Button, StyleSheet, Text, View} from "react-native";
 export default class PickLocation extends Component {
     render() {
         return (
-            <View>
+            <View style={{width: '100%', justifyContent: 'center', alignItems: 'center'}}>
                 <View style={style.placeholder}>
                     <Text>Map</Text>
                 </View>

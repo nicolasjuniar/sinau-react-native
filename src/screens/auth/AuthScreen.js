@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {ImageBackground, View} from 'react-native'
+import {ImageBackground, View, StyleSheet} from 'react-native'
 import startMainTabs from '../maintabs/startMainTabs'
 import Styles from '../../styles'
 import DefaultInput from '../../customcomponent/defaultinput/DefaultInput'
@@ -20,9 +20,9 @@ export default class AuthScreen extends Component {
                     <HeadingText>Please Log In</HeadingText>
                     <ButtonWithBackground color={'#29aaf4'}>Switch to Login</ButtonWithBackground>
                     <View style={Styles.authInputContainer}>
-                        <DefaultInput placeholder={'Your E-Mail Address'}/>
-                        <DefaultInput placeholder={'Password'}/>
-                        <DefaultInput placeholder={'Confirm Password'}/>
+                        <DefaultInput placeholder={'Your E-Mail Address'} style={authStyles.textInput}/>
+                        <DefaultInput placeholder={'Password'} style={authStyles.textInput}/>
+                        <DefaultInput placeholder={'Confirm Password'} style={authStyles.textInput}/>
                     </View>
                     <ButtonWithBackground color={'#29aaf4'} onPress={this.loginHandler}>Submit</ButtonWithBackground>
                 </View>
@@ -30,3 +30,14 @@ export default class AuthScreen extends Component {
         )
     }
 }
+
+const authStyles = StyleSheet.create({
+    textInput: {
+        width: '100%',
+        borderWidth: 1,
+        borderColor: '#bbb',
+        padding: 5,
+        margin: 8,
+        backgroundColor: '#eee'
+    }
+});
